@@ -5,7 +5,7 @@
 /**
  * main-Entry point
  * apply if conditional statement to say if n is negative or positive
- * Return : 0 (success)
+ * Return: Always 0 (success)
  * **/
 int main(void)
 {
