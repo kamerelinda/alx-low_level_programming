@@ -41,5 +41,5 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
-	return (1);
+	fprintf(stderr, "a\n");
 }
