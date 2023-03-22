@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  *print_times_table-prints the times table of a number
@@ -22,18 +21,18 @@ void print_times_table(int n)
 				{
 					_putchar(r + '0');
 				}
-				else if (r < 100)
+				if (r < 100)
 				{
 					_putchar(r / 10 + '0');
 					_putchar(r % 10 + '0');
 				}
-				else
+				if
 				{
 					_putchar(r / 100 + '0');
 					_putchar((r / 10) % 10 + '0');
 					_putchar(r % 10 + '0');
 				}
-				if (j < n)
+				else if (j < n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
@@ -41,5 +40,4 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
-	fprintf(stderr, "\n");
 }
