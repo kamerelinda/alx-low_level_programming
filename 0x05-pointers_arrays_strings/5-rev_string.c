@@ -7,20 +7,27 @@
  */
 void rev_string(char *s)
 {
-	char ch, *p, *q;
+	int i, c, k;
+	char *a, aux;
 
-	/* Point q at the last character in s[], or at &s[0] if s is empty. */
-	for (q = s; *q != '\0'; ++q)
-		if (q > s)
-			--q;
-	/* Simultaneously sweep p from front to back and q from back to front,
-	 * * swapping characters at p and q, until the pointers meet. */
-	for (p = s; p < q; ++p, --q)
+	a = s;
+
+	while (s[c] != '\0')
 	{
-		ch = *p;
-		*p = *q;
-		*q = ch;
+		c++;
 	}
-	return s;
+
+	for (k = 1; k < c; k++)
+	{
+		a++;
+	}
+
+	for (i = 0; i < (c / 2); i++)
+	{
+		aux = s[i];
+		s[i] = *a;
+		*a = aux;
+		a--;
+	}
 }
 
