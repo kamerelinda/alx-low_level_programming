@@ -18,8 +18,8 @@ char *cap_string(char *str)
 			cap_next = 0;
 		}
 		else if ((*ptr >= ' ' && *ptr <= '/') ||
-				(*ptr >= ':' && *ptr <= '@') || (*ptr >= '[' && *ptr <= '`') ||
-				(*ptr >= '{' && *ptr <= '}'))
+			(*ptr >= ':' && *ptr <= '@') || (*ptr >= '[' && *ptr <= '`') ||
+			(*ptr >= '{' && *ptr <= '}'))
 		{
 			cap_next = 1;
 		}
