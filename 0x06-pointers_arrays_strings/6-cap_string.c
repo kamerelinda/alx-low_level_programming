@@ -17,9 +17,9 @@ char *cap_string(char *str)
 			*ptr -= 32;
 			cap_next = 0;
 		}
-		else if ((*ptr >= ' ' && *ptr <= '/') ||
-			(*ptr >= ':' && *ptr <= '@') || (*ptr >= '[' && *ptr <= '`') ||
-			(*ptr >= '{' && *ptr <= '}'))
+		else if ((*ptr >= ' ' && *ptr <= '	') ||
+			(*ptr >= ';' && *ptr <= ',') || (*ptr >= '(' && *ptr <= ')') ||
+			(*ptr >= '{' && *ptr <= '}') || (*ptr ))
 		{
 			cap_next = 1;
 		}
