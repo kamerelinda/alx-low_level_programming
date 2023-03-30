@@ -7,27 +7,29 @@
  */
 char *cap_string(char *str)
 {
-	char *ptr = str;
-	int cap_next = 1;
+	int index = 0;
 
-	while (*ptr != '\0')
+	while (str[index])
 	{
-		if (cap_next && (*ptr >= 'a' && *ptr <= 'z'))
-		{
-			*ptr -= 32;
-			cap_next = 0;
-		}
-		else if ((*ptr >= ' ' && *ptr <= '	') ||
-			(*ptr >= ';' && *ptr <= ',') || (*ptr >= '(' && *ptr <= ')') ||
-			(*ptr >= '{' && *ptr <= '}') || (*ptr ))
-		{
-			cap_next = 1;
-		}
-		else
-		{
-			cap_next = 0;
-		}
-		ptr++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+		if (str[index - 1] == ' ' ||
+			str[index - 1] == '\t' ||
+			str[index - 1] == '\n' ||
+			str[index - 1] == ',' ||
+			str[index - 1] == ':' ||
+			str[index - 1] == '.' ||
+			str[index - 1] == '!' ||
+			str[index - 1] == '?' ||
+			str[index - 1] == '"' ||
+			str[index - 1] == '(' ||
+			str[index - 1] == ')' ||
+			str[index - 1] == '{' ||
+			str[index - 1] == '}' ||
+			index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
 	return (str);
 }
