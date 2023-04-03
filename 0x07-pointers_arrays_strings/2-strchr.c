@@ -8,7 +8,7 @@
  *
  *@c: character to be found
  *
- *Return: null or a string
+ *Return: Always 0 (success)
  */
 char *_strchr(char *s, char c)
 {
