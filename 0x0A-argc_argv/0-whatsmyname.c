@@ -6,8 +6,7 @@
  *
  *@argc: count of the arguments entered
  *
- *@argv
- ne!
+ *@argv: array of a string
  *
  * Return: Always 0 (success)
  */
