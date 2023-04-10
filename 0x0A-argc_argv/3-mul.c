@@ -1,6 +1,5 @@
-#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 
 /**
@@ -60,7 +59,7 @@ int main(int argc, char *argv[])
 
 	if (argc > 1)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
+		mul = _atoi(argv[1]) * _atoi(argv[2]);
 		printf("%d\n", mul);
 	}
 	else if (argc == 1)
