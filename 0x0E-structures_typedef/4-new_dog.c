@@ -3,7 +3,6 @@
 
 /**
  * _strlen - a function that gets a length of string
- * code by ArchibaldTK
  * @str: the string to get the length
  * Return: length of @str
  */
@@ -37,7 +36,6 @@ char *_strcopy(char *dest, char *src)
 
 /**
  * new_dog - a function that creates a new dog
- * code by ArchibaldTK
  * @name: name of dog
  * @age: age of dog
  * @owner: dog owner
